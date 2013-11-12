@@ -17,9 +17,9 @@ For bonus points--send an SMS using Twilio from scheduled scripts. Completing th
 
 You can get these challenges validated by Chris, Matt, or Miranda until the end of the conference.  Everyone who completes the challenge earns the Mobile Services t-shirt below and one entry in the raffle for a Jawbone Big Jambox.  Those who complete the bonus challenge earn two entries in the Jambox raffle.
 
-![image](mobile-tshirt.png)
+![image](images/mobile-tshirt.png)
 
-![image](mobile-jambox.jpg)
+![image](images/mobile-jambox.jpg)
 
 
 ### Challenge Walkthrough
@@ -30,27 +30,27 @@ You can get these challenges validated by Chris, Matt, or Miranda until the end 
 
 * Click New --> Compute --> Mobile Service --> Create.  Then specify URL and database login/password order to create a new Mobile Service and the associated SQL database.
 
-![image](mobile-create.png)
+![image](images/mobile-create.png)
 
 * Select your new mobile service, choose Android, and click 'Create a New Android app.'
 
-![image](mobile-portal-quickstart-android.png)
+![image](images/mobile-portal-quickstart-android.png)
 
 * If you already have the Android Development Tools installed, click 'Create ToDoItem Table' and download the sample app.  This will automatically create a table called 'ToDoItem' in your app's SQL database and connect your sample client app to that table.
 
-![image](mobile-quickstart-steps-android.png)
+![image](images/mobile-quickstart-steps-android.png)
 
 * Open the sample app in Eclipse and run the app.  In the simulator, you'll be able to add items to the Todo list.  Add a few items like 'Head to Chris Risner's session' and 'Complete the Mobile Services challenge.' When you hit the (+) button, you're sending a POST your app's Mobile Services backend hosted in Windows Azure.
 
-![image](mobile-entered-items.png)
+![image](images/mobile-entered-items.png)
 
 * If you head back to the [Windows Azure Portal](manage.windowsazure.com), you'll see that items that you added to the list are now stored in the TodoItem table in your SQL database.
 
-![image](mobile-items-added.png)
+![image](images/mobile-items-added.png)
 
 * When you drill down into the 'TodoItem' table under the 'DATA' tab in the portal, you'll see the items you entered in a table with three columns.  Next, we're going to click the script table and copy the following code snippet into the 'Insert' operation to see how dynamic schemas work in Mobile Services.
 
-![image](mobile-script-drilldown.png)
+![image](images/mobile-script-drilldown.png)
 
 Scripts are how you add some custom logic to your app, connect to other Windows Azure services, or work with third party APIs.  With Mobile Services, all your server scripts need to be written in JavaScript.
 
@@ -66,11 +66,11 @@ function insert(item, user, request) {
 
 * Head back to the simulator and add another item--like 'Testing Dynamic Schema' and hit the (+) button.  Now, if you refresh the table in the Windows Azure portal, you will see a fourth column added that details when the item was created.
 
-![image](mobile-date-created.png)
+![image](images/mobile-date-created.png)
 
 * Enabling dynamic schema is great when you want to create the schema for your table but you don't want to let all your users alter it in production.  To turn off dynamic schema, head to the configure tab and select 'OFF' for dynamic schema.
 
-![image](mobile-dynamic-schema-off.png)
+![image](images/mobile-dynamic-schema-off.png)
 
 * Here, we've walked through using a SQL database with your Mobile Service, but some apps need to store unstructured binary or typed data. Using scripts, you could easily connect to Windows Azure Blob or Table Storage (as well as many other third party data options). 
 
@@ -80,17 +80,17 @@ function insert(item, user, request) {
 
 * In the Management Portal, click the Data tab, and then click the TodoItem table.
 
-![image](mobile-portal-data-tables.png)
+![image](images/mobile-portal-data-tables.png)
 
 * Click the Permissions tab, set all permissions to 'Only Authenticated Users,' and then click Save. This will ensure that all operations against the TodoItem table require an authenticated user. This also simplifies the scripts in the next tutorial because they will not have to allow for the possibility of anonymous users.
 
-![image](mobile-portal-change-table-perms.png)
+![image](images/mobile-portal-change-table-perms.png)
 
 * Follow the steps on [this page](http://www.windowsazure.com/en-us/develop/mobile/how-to-guides/register-for-facebook-authentication/) to register your app for Facebook authentication with Mobile Services.
 
 * Copy over your App Key and Secret from Facebook into the appropriate slots in the 'IDENTITY' tab. Hit 'Save.'
 
-![image](mobile-facebook-auth.png)
+![image](images/mobile-facebook-auth.png)
 
 * Back in Eclipse, open the ToDoActivity.java file and add the following import statements:
 
@@ -169,7 +169,7 @@ refreshItemsFromTable();
 
 * To get started with push notifications, head to the 'PUSH' tab, copy the API key you receive from Google Cloud Messaging (GCM) and hit 'Save.' (More details on getting an API key for your Android app can be found [here](https://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-push-android/).)
 
-![image](mobile-push-tab-android.png)
+![image](images/mobile-push-tab-android.png)
 
 * If you haven't added the Google Cloud Messaging for Android Library, follow the steps on [this page](https://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-push-android/) under 'Add Push Notifications.'
 
@@ -222,7 +222,7 @@ item.setRegistrationId(mRegistationId);
 
 * In the Package Explorer, right-click the package (under the src node), then click New --> Class.  In 'Name' type GCMInstentService.  In Superclass type com.google.android.cgm.GCMBaseIntentService.  Then hit Finish.  That will create the new GCMIntentService class.
 
-![image](mobile-services-android-create-class.png)
+![image](images/mobile-services-android-create-class.png)
 
 * Add the following import statements:
 
@@ -289,13 +289,13 @@ This registers a new insert script, which uses the gcm object to send a push not
 
 *Restart Eclipse, then in Package Explorer, right-click the project, click Properties, click Android, check Google APIs, then click OK.
 
-![image](mobile-services-import-android-properties.png)
+![image](images/mobile-services-import-android-properties.png)
 
 *Select Google APIs in Target, then click OK.
 
 *From Window, select Android Virtual Device Manager, select your device, click Edit.
 
-![image](mobile-services-android-virtual-device-manager-edit.png)
+![image](images/mobile-services-android-virtual-device-manager-edit.png)
 
 *From the Run menu, click Run to start the app.  If you type another todo item, then click add, you'll see an icon appear in the top left of the screen. If you click on that, the notification will display.
 
@@ -325,17 +325,17 @@ $ git push origin master
 
 * Head to the 'Configure' tab in the management portal and scroll down to 'developer analytics,' seclect 'Add-On' and hit 'Save.'
 
-![image](mobile-configure-new-relic-monitoring.png)
+![image](images/mobile-configure-new-relic-monitoring.png)
 
 * Once you run your client app and generate a few read, create, update, and delete requests to your mobile service.  Then, go to 'Add-Ons in the left nav of the portal, select New Relic and hit 'Manage' at the bottom.
 
 * Click 'Applications' and then your mobile service.
 
-![image](mobile-new-relic-dashboard.png)
+![image](images/mobile-new-relic-dashboard.png)
 
 * Click 'Web transactions' to see all the requests you've made to your mobile service.
 
-![image](mobile-new-relic-dashboard-2.png)
+![image](images/mobile-new-relic-dashboard-2.png)
 
 
 ###Resources:
