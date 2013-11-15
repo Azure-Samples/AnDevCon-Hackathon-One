@@ -15,7 +15,7 @@ For bonus points--send an SMS using Twilio from scheduled scripts. Completing th
 
 ###Validation…and Prizes!
 
-You can get these challenges validated by Chris, Matt, or Miranda until the end of the conference.  Everyone who completes the challenge earns the Mobile Services t-shirt below and one entry in the raffle for a Jawbone Big Jambox.  Those who complete the bonus challenge earn two entries in the Jambox raffle.
+You can get these challenges validated by Chris, Matt, or Miranda at the booth until the end of the conference.  After that, you have until the end of Monday, November 18th to email screenshots of your Mobile Service and app running to mirluna@microsoft.com.  Everyone who completes the challenge earns the Mobile Services t-shirt below and one entry in the raffle for a Jawbone Big Jambox.  Those who complete the bonus challenge earn two entries in the Jambox raffle.
 
 ![image](images/mobile-tshirt.png)
 
