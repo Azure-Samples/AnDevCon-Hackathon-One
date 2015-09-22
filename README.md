@@ -1,3 +1,9 @@
+---
+services:
+platforms:
+author: azure
+---
+
 # Windows Azure Mobile Services
 
 ### The Challenge
